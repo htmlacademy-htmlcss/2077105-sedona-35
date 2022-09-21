@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Anastasia  Karpova](https://up.htmlacademy.ru/htmlcss/35/user/2077105).
-* Наставник: `Неизвестно`.
+* Наставник: [Сергей Остаповец](https://htmlacademy.ru/profile/seraphim).
 
 ---
 
