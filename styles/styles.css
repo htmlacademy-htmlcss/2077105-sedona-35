@@ -21,19 +21,30 @@
     src: url("../fonts/pt-sans-bold.woff2") format("woff2");
     font-display: swap;
    }
-html {
-    height: 100%;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 body {
     margin: 0;
-    display: flex;
     flex-direction: column;
     min-height: 100%;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Calibri, sans-serif;
     font-size: 18px;
     line-height: 21px;
     color: #333333;
 }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 .button {
     font-family: inherit;
     text-align: center;
@@ -41,8 +52,14 @@ body {
     text-transform: uppercase;
 }
 .page-header {
+    display: flex;
     color:#000000;
     background-color: #FFFFFF;
+}
+.logo img {
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 .navigation {
     display: flex;
@@ -50,15 +67,23 @@ body {
     margin: 0 auto;
 }
 .navigation-list {
+    display: flex;
     width: 468px;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 .navigation-user {
     max-width: 639px;
     margin-left: auto;
 }
+.navigation-user .navigation-link {
+    min-width: 8px;
+    min-height: 10px;
+}
 .navigation-link {
+    display: block;
+    padding: 20px 20px;
     font-size: 20px;
     line-height: 24px;
     font-weight: 700;
@@ -78,13 +103,15 @@ body {
     width: 1200px;
     margin: 0 auto;
 }
-.main-index-background {
-    display: block;
+.intro {
     margin: 0%;
-    padding: 0%;
+    padding-top: 51px;
+    padding-bottom: 82px;
+    padding-left: 371px;
+    padding-right: 371px;
     max-width: 1200px;
-    background: url('../images/index-background.png') no-repeat fixed;
-    width: 1200px;
+    background: url('../images/index-background.png') no-repeat;
+    width: 100%;
     height: 485px;
 }
 .advantage-title {
@@ -93,8 +120,12 @@ body {
     line-height: 36px;
     text-align: center;
     text-transform: uppercase;
+    margin-top: 69px;
+    margin-bottom: 25px;
+    margin-left: 290px;
+    margin-right: 290px;
 }
-.advantages {
+.advantages-text {
     text-align: center;
     font-weight: 400;
     font-size: 22px;
@@ -103,39 +134,52 @@ body {
 .advantages-list {
     display: flex;
     flex-wrap: wrap;
-    width: 1200px;
+    width: 100%;
+    padding: 0;
     text-align: center;
+    list-style-type: none;
+    margin-top: 90px;
 }
 .advantages-item-img {
     display: flex;
     color: #FFFFFF;
     background-color: #82B3D3;
 }
-.advantages-text div {
+.advantages-block div {
     display: flex;
     flex-direction: column;
 }
 .advantages-img div{
     display: flex;
     padding: 100% auto;
-    margin: 100% auto;
+    margin-left: 100% auto;
 }
-.advantages-item:nth-child(odd) {
+.advantages-block {
+    width: 400px;
+    height: 384px;
+    padding-top: 92px;
+    padding-bottom: 111px;
+    padding-left: 85px;
+    padding-right: 85px;
+}
+.advantages-item {
     width: 400px;
     height: 384px;
     color: #000000;
     background-color: rgba(131, 179, 211, 0.12);
+    padding-top: 103px;
+    padding-bottom: 121px;
+    padding-left: 85px;
+    padding-right: 85px;
 }
 .advantages-item:nth-child(even) {
-    width: 400px;
-    height: 384px;
-    color: #000000;
     background-color: rgba(131, 179, 211, 0.2);
 }
 .advantages-title {
     font-size: 24px;
     line-height: 28px;
     text-transform: uppercase;
+
 }
 .advantages-description {
     font-weight: 400;
@@ -144,10 +188,12 @@ body {
 }
 .services-list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0;
+    width: 100%;
     padding: 0;
     text-align: center;
+    list-style-type: none;
 }
 .services-title {
     font-weight: 700;
@@ -155,6 +201,8 @@ body {
     line-height: 28px;
     text-transform: uppercase;
     color: #000000;
+    margin-top: 30px
+    margin-bottom: 30px;
 }
 .services-description {
     font-weight: 400;
@@ -162,21 +210,23 @@ body {
     line-height: 21px;
     color: #333333;
 }
-.services-item:nth-child(even) {
+.services-item {
     width: 400px;
     height: 384px;
     color: #000000;
     background-color: rgba(255, 255, 255, 1);
+    padding-top: 80px;
+    padding-bottom: 81px;
+    padding-left: 85px;
+    padding-right: 85px;
 }
 .services-item:nth-child(odd) {
-    width: 400px;
-    height: 384px;
-    color: #000000;
     background-color: rgba(131, 179, 211, 0.12);
 }
 .search {
     background-color: #FFFFFF;
     text-align: center;
+    padding-top: 96px;
 }
 .search h2 {
     font-weight: 700;
@@ -189,32 +239,46 @@ body {
    font-size: 22px;
    line-height: 26px;
    color: #333333;
+   margin-top: 20px;
+   margin-bottom: 62px;
 }
 .search a {
     font-weight: 700;
     font-size: 20px;
     line-height: 36px;
     text-transform: uppercase;
+    color: #FFFFFF;
     background: #756157;
+    margin-top: 54px;
+    margin-bottom: 96px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 .subscribe {
     font-family: 'PT Sans';
     text-align: center;
     background: url('../images/subscribe.jpg') no-repeat fixed;
-    width: 1200px;
+    width: 100%;
     height: 414.86px;
     color: #FFFFFF;
+    margin-top: 96px;
+    margin-bottom: 45px;
 }
 .subscribe-title {
     font-weight: 700;
     font-size: 30px;
     line-height: 36px;
     text-transform: uppercase;
+    padding-top: 96px;
+    padding-bottom: 20px;
 }
 .subscribe p {
     font-weight: 400;
     font-size: 22px;
     line-height: 26px;
+    padding-bottom: 54px;
 }
 .page-footer {
     background-color: #FFFFFF;
@@ -225,21 +289,41 @@ body {
     margin: 0 auto;
 }
 .footer-social {
-    width: 448.5px;
-    margin-right: 48.5px;
+    width: 450px;
+    margin-right: 50px;
 }
-.footer-contacts {
+.footer-social-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.footer-social-item {
+    width: 42px;
+    height: 28px;
+    margin-right: 28px;
+    margin-bottom: 0;
+}
+.footer-social-item:nth-child(3) {
+    margin-right: 0;
+}
+.telephone {
     width: 331px;
     height: 40px;
-    margin-top: 45px;
-    margin-bottom: 35px;
+    padding-top: 45px;
+    padding-bottom: 35px;
     font-weight: 400;
     font-size: 40px;
     line-height: 40px;
+    color: #000000;
+    text-decoration: none;
     text-transform: uppercase;
 }
 .htmlacademy {
-    width: 420.5px;
+    width: 422px;
     margin-left: auto;
     max-width: 120px;
+    padding-top: 48.5px;
+    padding-bottom: 38.6px;
 }
