@@ -30,10 +30,10 @@ body {
     margin: 0;
     flex-direction: column;
     min-height: 100%;
-    font-family: 'PT Sans', Calibri, sans-serif;
+    font-family: 'PT Sans', Calib sans-serif;
     font-size: 18px;
     line-height: 21px;
-    color: #333333;
+    color: #000000;
 }
 .visually-hidden {
     position: absolute;
@@ -55,6 +55,8 @@ body {
     display: flex;
     color:#000000;
     background-color: #FFFFFF;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 .logo img {
     width: 1200px;
@@ -151,6 +153,8 @@ body {
 }
 .advantages-img div{
     display: flex;
+    width: 800px;
+    height: 384px;
     padding: 100% auto;
     margin-left: 100% auto;
 }
@@ -164,7 +168,7 @@ body {
 }
 .advantages-item {
     width: 400px;
-    height: 384px;
+    min-height: 384px;
     color: #000000;
     background-color: rgba(131, 179, 211, 0.12);
     padding-top: 103px;
@@ -201,7 +205,7 @@ body {
     line-height: 28px;
     text-transform: uppercase;
     color: #000000;
-    margin-top: 30px
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 .services-description {
@@ -212,7 +216,7 @@ body {
 }
 .services-item {
     width: 400px;
-    height: 384px;
+    min-height: 384px;
     color: #000000;
     background-color: rgba(255, 255, 255, 1);
     padding-top: 80px;
@@ -260,7 +264,6 @@ body {
     font-family: 'PT Sans';
     text-align: center;
     background: url('../images/subscribe.jpg') no-repeat fixed;
-    width: 100%;
     height: 414.86px;
     color: #FFFFFF;
     margin-top: 96px;
@@ -324,6 +327,6 @@ body {
     width: 422px;
     margin-left: auto;
     max-width: 120px;
-    padding-top: 48.5px;
-    padding-bottom: 38.6px;
+    padding-top: 49px;
+    padding-bottom: 39px;
 }
