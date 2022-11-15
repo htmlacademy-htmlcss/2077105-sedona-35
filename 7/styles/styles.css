@@ -147,6 +147,9 @@ body {
     color: #FFFFFF;
     background-color: #82B3D3;
 }
+.advantages img {
+    display: flex;
+}
 .advantages-block div {
     display: flex;
     flex-direction: column;
