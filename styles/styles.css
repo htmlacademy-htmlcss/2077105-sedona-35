@@ -30,7 +30,7 @@ body {
     margin: 0;
     flex-direction: column;
     min-height: 100%;
-    font-family: 'PT Sans', Calibri sans-serif;
+    font-family: 'PT Sans', Calibri, sans-serif;
     font-size: 18px;
     line-height: 21px;
     color: #FFFFFF;
