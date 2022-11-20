@@ -234,6 +234,7 @@ body {
     font-size: 24px;
     line-height: 28px;
     text-transform: uppercase;
+    margin-bottom: 62px;
 }
 .advantage-title::before {
     position: absolute;
@@ -393,28 +394,41 @@ input {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 24px 18px;
-}
-.footer-social-vk {
-    background-image: url('../images/socialmedia/vkontakte.svg');
-}
-.footer-social-tg {
-    background-image: url('../images/socialmedia/telergram.svg');
-}
-.footer-social-ytb {
-    background-image: url('../images/socialmedia/youtube.svg');
+
 }
 .footer-social-list {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0;
+    text-align: center;
+    margin-left: 72px;
     padding: 0;
     list-style-type: none;
+    width: 142px;
+
+}
+.footer-social-link a {
+    display: block;
+    position: relative;
+    fill:#83B3D3;
+}
+.footer-social-link:default {
+}
+.footer-social-link:hover {
+
+}
+.footer-social-link:hover {
+
+}
+.footer-social-link:active {
+
 }
 .footer-social-item {
-    width: 42px;
+    display: flex;
+    text-align: center;
+    width: 47px;
     height: 28px;
     margin-right: 28px;
     margin-bottom: 0;
+
 }
 .footer-social-item:nth-child(3) {
     margin-right: 0;
@@ -432,9 +446,7 @@ input {
     text-transform: uppercase;
 }
 .htmlacademy {
-    width: 422px;
+    width: 115px;
     margin-left: auto;
-    max-width: 120px;
-    padding-top: 49px;
-    padding-bottom: 39px;
+    margin-top: 49px;
 }
