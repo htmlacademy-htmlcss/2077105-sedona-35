@@ -30,7 +30,7 @@ body {
     margin: 0;
     flex-direction: column;
     min-height: 100%;
-    font-family: 'PT Sans', Calibri, sans-serif;
+    font-family: 'PT Sans', sans-serif;
     font-size: 18px;
     line-height: 21px;
     color: #FFFFFF;
@@ -53,7 +53,6 @@ body {
 }
 .page-header {
     display: flex;
-    width: 1200px;
     height: 64px;
     color:#000000;
     background-color: #FFFFFF;
@@ -83,6 +82,9 @@ body {
     align-items: center;
     padding-left: 16px;
     padding-right: 16px;
+}
+.navigation-list .navigation-user {
+    width: 268px;
 }
 .navigation-user {
     display: flex;
@@ -125,15 +127,17 @@ body {
     min-height: 42px;
     margin-right: 25px;
 }
-.navigation-button{
-    display: inline-block;
-    width: 160px;
+.navigation-button {
+    display: block;
+    white-space: nowrap;
+    min-width: 160px;
+    height: 36px;
     padding-top: 8px;
     padding-bottom: 8px;
     padding-left: 34px;
     padding-right: 34px;
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: 700;
     text-align: center;
     text-transform: uppercase;
@@ -141,6 +145,8 @@ body {
     color: #FFFFFF;
     background-color: #756157;
     margin-right: 70px;
+    margin-top: 14px;
+    margin-bottom: 14px;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -159,7 +165,8 @@ body {
     padding-left: 371px;
     padding-right: 371px;
     max-width: 1200px;
-    background: url('../images/index-background.png') no-repeat;
+    background: url('../images/index-background.jpg') no-repeat;
+    background-color: #FFFFFF;
     width: 100%;
     height: 485px;
 }
@@ -235,6 +242,10 @@ body {
     line-height: 28px;
     text-transform: uppercase;
     margin-bottom: 62px;
+    margin-left: 27px;
+    margin-right: 27px;
+    width: 175px;
+    text-align: center;
 }
 .advantage-title::before {
     position: absolute;
@@ -325,11 +336,11 @@ body {
     padding-right: 50px;
 }
 .subscribe {
-    font-family: 'PT Sans';
+    font-family: 'PT Sans', sans-serif;
     text-align: center;
-    background: url('../images/subscribe.jpg') no-repeat fixed;
+    background: url('../images/subscribe.jpg') no-repeat;
     height: 414.86px;
-    color: #FFFFFF;
+    background-color: #FFFFFF;
     margin-top: 96px;
     margin-bottom: 45px;
 }
@@ -386,40 +397,34 @@ input {
     margin: 0 auto;
 }
 .footer-social {
-    width: 450px;
+    width: 142px;
     margin-right: 50px;
+    margin-left: 70px;
 }
 .footer-social-link {
     display: block;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 24px 18px;
-
+    fill: #83B3D3;
 }
 .footer-social-list {
     display: flex;
     text-align: center;
-    margin-left: 72px;
     padding: 0;
     list-style-type: none;
-    width: 142px;
-
 }
 .footer-social-link a {
     display: block;
-    position: relative;
-    fill:#83B3D3;
-}
-.footer-social-link:default {
 }
 .footer-social-link:hover {
-
+    fill: #68A2CA;
 }
-.footer-social-link:hover {
-
+.footer-social-link:focus {
+    fill: #68A2CA;
 }
 .footer-social-link:active {
-
+    fill: rgba(104, 162, 202, 0.3);
 }
 .footer-social-item {
     display: flex;
@@ -428,10 +433,15 @@ input {
     height: 28px;
     margin-right: 28px;
     margin-bottom: 0;
-
+    text-align: center;
 }
 .footer-social-item:nth-child(3) {
     margin-right: 0;
+}
+.footer-contacts {
+    width: 720px;
+    margin-left: 236px;
+    margin-right: 236px;
 }
 .telephone {
     width: 331px;
@@ -444,9 +454,19 @@ input {
     color: #000000;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
 }
-.htmlacademy {
-    width: 115px;
-    margin-left: auto;
-    margin-top: 49px;
+.htmlacademy section {
+    width: 185px;
+    margin-right: 70px;
+    fill: #000000;
+}
+.htmlacademy:hover {
+    fill: #756157;
+}
+.htmlacademy:focus {
+    fill: #756157;
+}
+.htmlacademy:active {
+    fill: rgba(117, 97, 87, 0.3);
 }
